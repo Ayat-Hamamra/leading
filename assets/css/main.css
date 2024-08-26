@@ -1,0 +1,190 @@
+@import url(./base.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: var(--mainFont);
+}
+
+.header {
+    padding: 15px 0px;
+    background-color: rgb(241, 225, 231);
+}
+
+.header .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.header .logo img {
+    width: 25px;
+}
+
+.header .logo a {
+    font-weight: 500;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--mainColor);
+
+}
+
+.home {
+    order: 1;
+    color: var(--mainColor);
+    display: none;
+
+}
+
+.header .nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header .nav ul li a {
+    color: #101828;
+    font-family: var(--mainFont);
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: calc(100% - 33px);
+    }
+
+    .header .logo img {
+        width: 20px;
+    }
+
+    .header .logo a {
+        font-size: 14px;
+    }
+}
+
+.active {
+    font-weight: 700;
+}
+
+.auth {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.auth a {
+    padding: 5px 25px;
+    font-family: var(--subFont);
+    border: solid 2px var(--mainColor);
+    border-radius: 12px;
+}
+
+.auth .login {
+    color: var(--mainColor);
+
+}
+
+.auth .Register {
+    color: #ffffff;
+    background-color: var(--mainColor);
+}
+
+@media screen and (max-width: 916px) {
+    .nav {
+        display: none;
+    }
+
+    .home {
+        display: block;
+    }
+
+    .auth {
+        display: none;
+    }
+}
+
+
+.footer {
+    font-family: var(--mainFont);
+    color: #ffffff;
+    background-color: #393E46;
+    padding: 50px 0px;
+
+}
+
+
+.footer a {
+    color: #ffffff;
+}
+
+
+.start {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: calc((100% - 30px) / 2);
+}
+
+.footer .start .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.footer .start .logo img {
+    width: 25px;
+}
+
+.footer .start .logo a {
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+.footer .start .icon img {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border: 1px solid #ffffff
+}
+
+.end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: calc((100% - 20px) / 2);
+
+}
+
+.footer .end .end-item .nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (max-width:792px) {
+    .footer .row {
+        flex-direction: column;
+    }
+
+    .start,
+    .end {
+        width: 100%;
+    }
+
+    .end {
+        gap: 20px;
+    }
+
+    .end .end-item {
+        width: 30%;
+    }
+
+    @media screen and (max-width:430px) {
+        .end .end-item {
+            width: 40%;
+            justify-content: center;
+        }
+    }
+}
